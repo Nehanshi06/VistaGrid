@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Image Gallery</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <section class="gallery">
+        <div class="container">
+            <h1>Image Gallery</h1>
+            
+            <!-- Filter Buttons -->
+            <div class="row">
+                <div class="gallery-filter">
+                    <span class="filter-item active" data-filter="all"><i class="fas fa-th"></i> All</span>
+                    <span class="filter-item" data-filter="nature"><i class="fas fa-leaf"></i> Nature</span>
+                    <span class="filter-item" data-filter="car"><i class="fas fa-car"></i> Car</span>
+                    <span class="filter-item" data-filter="technology"><i class="fas fa-laptop-code"></i> Technology</span>
+                    <span class="filter-item" data-filter="travel"><i class="fas fa-plane"></i> Travel</span>
+                    <span class="filter-item" data-filter="food"><i class="fas fa-utensils"></i> Food</span>
+                </div>
+            </div>
+            
+            <!-- Gallery Images -->
+            <div class="row">
+                <div class="gallery-item nature">
+                    <div class="gallery-item-inner">
+                        <img src="images/nature1.jpg" alt="Nature 1" data-index="0">
+                        <div class="overlay"><i class="fas fa-search-plus"></i></div>
+                    </div>
+                </div>
+                <div class="gallery-item nature">
+                    <div class="gallery-item-inner">
+                        <img src="images/nature2.jpg" alt="Nature 2" data-index="1">
+                        <div class="overlay"><i class="fas fa-search-plus"></i></div>
+                    </div>
+                </div>
+                <div class="gallery-item nature">
+                    <div class="gallery-item-inner">
+                        <img src="images/nature3.jpeg" alt="Nature 3" data-index="2">
+                        <div class="overlay"><i class="fas fa-search-plus"></i></div>
+                    </div>
+                </div>
+                <div class="gallery-item nature">
+                    <div class="gallery-item-inner">
+                        <img src="images/nature4.jpeg" alt="Nature 4" data-index="3">
+                        <div class="overlay"><i class="fas fa-search-plus"></i></div>
+                    </div>
+                </div>
+                <div class="gallery-item nature">
+                    <div class="gallery-item-inner">
+                        <img src="images/nature5.jpeg" alt="Nature 5" data-index="4">
+                        <div class="overlay"><i class="fas fa-search-plus"></i></div>
+                    </div>
+                </div>
+                <div class="gallery-item nature">
+                    <div class="gallery-item-inner">
+                        <img src="images/nature6.jpeg" alt="Nature 6" data-index="5">
+                        <div class="overlay"><i class="fas fa-search-plus"></i></div>
+                    </div>
+                </div>
+                <div class="gallery-item nature">
+                    <div class="gallery-item-inner">
+                        <img src="images/nature7.jpeg" alt="Nature 7" data-index="6">
+                        <div class="overlay"><i class="fas fa-search-plus"></i></div>
+                    </div>
+                </div>
+                <div class="gallery-item nature">
+                    <div class="gallery-item-inner">
+                        <img src="images/nature8.jpeg" alt="Nature 8" data-index="7">
+                        <div class="overlay"><i class="fas fa-search-plus"></i></div>
+                    </div>
+                </div>
+                <div class="gallery-item nature">
+                    <div class="gallery-item-inner">
+                        <img src="images/nature9.jpeg" alt="Nature 9" data-index="8">
+                        <div class="overlay"><i class="fas fa-search-plus"></i></div>
+                    </div>
+                </div>
+                <div class="gallery-item nature">
+                    <div class="gallery-item-inner">
+                        <img src="images/nature10.jpeg" alt="Nature 10" data-index="9">
+                        <div class="overlay"><i class="fas fa-search-plus"></i></div>
+                    </div>
+                </div>
+                <div class="gallery-item nature">
+                    <div class="gallery-item-inner">
+                        <img src="images/nature11.jpeg" alt="Nature 11" data-index="10">
+                        <div class="overlay"><i class="fas fa-search-plus"></i></div>
+                    </div>
+                </div>
+                <div class="gallery-item nature">
+                    <div class="gallery-item-inner">
+                        <img src="images/nature12.jpeg" alt="Nature 12" data-index="11">
+                        <div class="overlay"><i class="fas fa-search-plus"></i></div>
+                    </div>
+                </div>
+                <div class="gallery-item car">
+                    <div class="gallery-item-inner">
+                        <img src="images/car1.jpeg" alt="Car 1" data-index="12">
+                        <div class="overlay"><i class="fas fa-search-plus"></i></div>
+                    </div>
+                </div>
+                <div class="gallery-item car">
+                    <div class="gallery-item-inner">
+                        <img src="images/car2.jpeg" alt="Car 2" data-index="13">
+                        <div class="overlay"><i class="fas fa-search-plus"></i></div>
+                    </div>
+                </div>
+                <div class="gallery-item car">
+                    <div class="gallery-item-inner">
+                        <img src="images/car3.jpeg" alt="Car 3" data-index="14">
+                        <div class="overlay"><i class="fas fa-search-plus"></i></div>
+                    </div>
+                </div>
+                <div class="gallery-item car">
+                    <div class="gallery-item-inner">
+                        <img src="images/car4.jpeg" alt="Car 4" data-index="15">
+                        <div class="overlay"><i class="fas fa-search-plus"></i></div>
+                    </div>
+                </div>
+                <div class="gallery-item car">
+                    <div class="gallery-item-inner">
+                        <img src="images/car5.jpeg" alt="Car 5" data-index="16">
+                        <div class="overlay"><i class="fas fa-search-plus"></i></div>
+                    </div>
+                </div>
+                <div class="gallery-item car">
+                    <div class="gallery-item-inner">
+                        <img src="images/car6.jpeg" alt="Car 6" data-index="17">
+                        <div class="overlay"><i class="fas fa-search-plus"></i></div>
+                    </div>
+                </div>
+                <div class="gallery-item car">
+                    <div class="gallery-item-inner">
+                        <img src="images/car7.jpeg" alt="Car 7" data-index="18">
+                        <div class="overlay"><i class="fas fa-search-plus"></i></div>
+                    </div>
+                </div>
+                <div class="gallery-item car">
+                    <div class="gallery-item-inner">
+                        <img src="images/car8.jpeg" alt="Car 8" data-index="19">
+                        <div class="overlay"><i class="fas fa-search-plus"></i></div>
+                    </div>
+                </div>
+                <div class="gallery-item car">
+                    <div class="gallery-item-inner">
+                        <img src="images/car9.jpeg" alt="Car 9" data-index="20">
+                        <div class="overlay"><i class="fas fa-search-plus"></i></div>
+                    </div>
+                </div>
+                <div class="gallery-item car">
+                    <div class="gallery-item-inner">
+                        <img src="images/car10.jpeg" alt="Car 10" data-index="21">
+                        <div class="overlay"><i class="fas fa-search-plus"></i></div>
+                    </div>
+                </div>
+                <div class="gallery-item car">
+                    <div class="gallery-item-inner">
+                        <img src="images/car11.jpeg" alt="Car 11" data-index="22">
+                        <div class="overlay"><i class="fas fa-search-plus"></i></div>
+                    </div>
+                </div>
+                <div class="gallery-item car">
+                    <div class="gallery-item-inner">
+                        <img src="images/car12.jpeg" alt="Car 12" data-index="23">
+                        <div class="overlay"><i class="fas fa-search-plus"></i></div>
+                    </div>
+                </div>
+                <div class="gallery-item technology">
+                    <div class="gallery-item-inner">
+                        <img src="images/tec1.jpeg" alt="Technology 1" data-index="24">
+                        <div class="overlay"><i class="fas fa-search-plus"></i></div>
+                    </div>
+                </div>
+                <div class="gallery-item technology">
+                    <div class="gallery-item-inner">
+                        <img src="images/tec2.jpeg" alt="Technology 2" data-index="25">
+                        <div class="overlay"><i class="fas fa-search-plus"></i></div>
+                    </div>
+                </div>
+                <div class="gallery-item technology">
+                    <div class="gallery-item-inner">
+                        <img src="images/tec3.jpeg" alt="Technology 3" data-index="26">
+                        <div class="overlay"><i class="fas fa-search-plus"></i></div>
+                    </div>
+                </div>
+                <div class="gallery-item technology">
+                    <div class="gallery-item-inner">
+                        <img src="images/tec4.jpeg" alt="Technology 4" data-index="27">
+                        <div class="overlay"><i class="fas fa-search-plus"></i></div>
+                    </div>
+                </div>
+                <div class="gallery-item technology">
+                    <div class="gallery-item-inner">
+                        <img src="images/tec5.jpeg" alt="Technology 5" data-index="28">
+                        <div class="overlay"><i class="fas fa-search-plus"></i></div>
+                    </div>
+                </div>
+                <div class="gallery-item technology">
+                    <div class="gallery-item-inner">
+                        <img src="images/tec6.jpeg" alt="Technology 6" data-index="29">
+                        <div class="overlay"><i class="fas fa-search-plus"></i></div>
+                    </div>
+                </div>
+                <div class="gallery-item technology">
+                    <div class="gallery-item-inner">
+                        <img src="images/tec7.jpeg" alt="Technology 7" data-index="30">
+                        <div class="overlay"><i class="fas fa-search-plus"></i></div>
+                    </div>
+                </div>
+                <div class="gallery-item technology">
+                    <div class="gallery-item-inner">
+                        <img src="images/tec8.jpeg" alt="Technology 8" data-index="31">
+                        <div class="overlay"><i class="fas fa-search-plus"></i></div>
+                    </div>
+                </div>
+                <div class="gallery-item technology">
+                    <div class="gallery-item-inner">
+                        <img src="images/tec9.jpeg" alt="Technology 9" data-index="32">
+                        <div class="overlay"><i class="fas fa-search-plus"></i></div>
+                    </div>
+                </div>
+                <div class="gallery-item technology">
+                    <div class="gallery-item-inner">
+                        <img src="images/tec10.jpeg" alt="Technology 10" data-index="33">
+                        <div class="overlay"><i class="fas fa-search-plus"></i></div>
+                    </div>
+                </div>
+                <div class="gallery-item technology">
+                    <div class="gallery-item-inner">
+                        <img src="images/tec11.jpeg" alt="Technology 11" data-index="34">
+                        <div class="overlay"><i class="fas fa-search-plus"></i></div>
+                    </div>
+                </div>
+                <div class="gallery-item technology">
+                    <div class="gallery-item-inner">
+                        <img src="images/tec12.jpeg" alt="Technology 12" data-index="35">
+                        <div class="overlay"><i class="fas fa-search-plus"></i></div>
+                    </div>
+                </div>
+                <div class="gallery-item travel">
+                    <div class="gallery-item-inner">
+                        <img src="images/travel1.jpeg" alt="travel 1" data-index="36">
+                        <div class="overlay"><i class="fas fa-search-plus"></i></div>
+                    </div>
+                </div>
+                <div class="gallery-item travel">
+                    <div class="gallery-item-inner">
+                        <img src="images/travel2.jpeg" alt="travel 2" data-index="37">
+                        <div class="overlay"><i class="fas fa-search-plus"></i></div>
+                    </div>
+                </div>
+                <div class="gallery-item travel">
+                    <div class="gallery-item-inner">
+                        <img src="images/travel3.jpeg" alt="travel 3" data-index="38">
+                        <div class="overlay"><i class="fas fa-search-plus"></i></div>
+                    </div>
+                </div>
+                <div class="gallery-item travel">
+                    <div class="gallery-item-inner">
+                        <img src="images/travel4.jpeg" alt="travel 4" data-index="39">
+                        <div class="overlay"><i class="fas fa-search-plus"></i></div>
+                    </div>
+                </div>
+                <div class="gallery-item travel">
+                    <div class="gallery-item-inner">
+                        <img src="images/travel5.jpeg" alt="travel 5" data-index="40">
+                        <div class="overlay"><i class="fas fa-search-plus"></i></div>
+                    </div>
+                </div>
+                <div class="gallery-item travel">
+                    <div class="gallery-item-inner">
+                        <img src="images/travel6.jpeg" alt="travel 6" data-index="41">
+                        <div class="overlay"><i class="fas fa-search-plus"></i></div>
+                    </div>
+                </div>
+                <div class="gallery-item travel">
+                    <div class="gallery-item-inner">
+                        <img src="images/travel7.jpeg" alt="travel 7" data-index="42">
+                        <div class="overlay"><i class="fas fa-search-plus"></i></div>
+                    </div>
+                </div>
+                <div class="gallery-item travel">
+                    <div class="gallery-item-inner">
+                        <img src="images/travel8.jpeg" alt="travel 8" data-index="43">
+                        <div class="overlay"><i class="fas fa-search-plus"></i></div>
+                    </div>
+                </div>
+                <div class="gallery-item travel">
+                    <div class="gallery-item-inner">
+                        <img src="images/travel9.jpeg" alt="travel 9" data-index="44">
+                        <div class="overlay"><i class="fas fa-search-plus"></i></div>
+                    </div>
+                </div>
+                <div class="gallery-item travel">
+                    <div class="gallery-item-inner">
+                        <img src="images/travel10.jpeg" alt="travel 10" data-index="45">
+                        <div class="overlay"><i class="fas fa-search-plus"></i></div>
+                    </div>
+                </div>
+                <div class="gallery-item travel">
+                    <div class="gallery-item-inner">
+                        <img src="images/travel11.jpeg" alt="travel 11" data-index="46">
+                        <div class="overlay"><i class="fas fa-search-plus"></i></div>
+                    </div>
+                </div>
+                <div class="gallery-item travel">
+                    <div class="gallery-item-inner">
+                        <img src="images/travel12.jpeg" alt="Travel 12" data-index="47">
+                        <div class="overlay"><i class="fas fa-search-plus"></i></div>
+                    </div>
+                </div>
+                <div class="gallery-item food">
+                    <div class="gallery-item-inner">
+                        <img src="images/food1.jpeg" alt="Food 1" data-index="48">
+                        <div class="overlay"><i class="fas fa-search-plus"></i></div>
+                    </div>
+                </div>
+                <div class="gallery-item food">
+                    <div class="gallery-item-inner">
+                        <img src="images/food2.jpeg" alt="Food 2" data-index="49">
+                        <div class="overlay"><i class="fas fa-search-plus"></i></div>
+                    </div>
+                </div>
+                <div class="gallery-item food">
+                    <div class="gallery-item-inner">
+                        <img src="images/food3.jpeg" alt="Food 3" data-index="50">
+                        <div class="overlay"><i class="fas fa-search-plus"></i></div>
+                    </div>
+                </div>
+                <div class="gallery-item food">
+                    <div class="gallery-item-inner">
+                        <img src="images/food4.jpeg" alt="Food 4" data-index="51">
+                        <div class="overlay"><i class="fas fa-search-plus"></i></div>
+                    </div>
+                </div>
+                <div class="gallery-item food">
+                    <div class="gallery-item-inner">
+                        <img src="images/food5.jpeg" alt="Food 5" data-index="52">
+                        <div class="overlay"><i class="fas fa-search-plus"></i></div>
+                    </div>
+                </div>
+                <div class="gallery-item food">
+                    <div class="gallery-item-inner">
+                        <img src="images/food6.jpeg" alt="Food 6" data-index="53">
+                        <div class="overlay"><i class="fas fa-search-plus"></i></div>
+                    </div>
+                </div>
+                <div class="gallery-item food">
+                    <div class="gallery-item-inner">
+                        <img src="images/food7.jpeg" alt="Food 7" data-index="54">
+                        <div class="overlay"><i class="fas fa-search-plus"></i></div>
+                    </div>
+                </div>
+                <div class="gallery-item food">
+                    <div class="gallery-item-inner">
+                        <img src="images/food8.jpeg" alt="Food 8" data-index="55">
+                        <div class="overlay"><i class="fas fa-search-plus"></i></div>
+                    </div>
+                </div>
+                <div class="gallery-item food">
+                    <div class="gallery-item-inner">
+                        <img src="images/food9.jpeg" alt="Food 9" data-index="56">
+                        <div class="overlay"><i class="fas fa-search-plus"></i></div>
+                    </div>
+                </div>
+                <div class="gallery-item food">
+                    <div class="gallery-item-inner">
+                        <img src="images/food10.jpeg" alt="Food 10" data-index="57">
+                        <div class="overlay"><i class="fas fa-search-plus"></i></div>
+                    </div>
+                </div>
+                <div class="gallery-item food">
+                    <div class="gallery-item-inner">
+                        <img src="images/food11.jpeg" alt="Food 11" data-index="58">
+                        <div class="overlay"><i class="fas fa-search-plus"></i></div>
+                    </div>
+                </div>
+                <div class="gallery-item food">
+                    <div class="gallery-item-inner">
+                        <img src="images/food12.jpeg" alt="Food 12" data-index="59">
+                        <div class="overlay"><i class="fas fa-search-plus"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+        <span class="close">&times;</span>
+        <div class="lightbox-nav">
+            <button class="prev"><i class="fas fa-chevron-left"></i></button>
+            <img class="lightbox-img" src="" alt="">
+            <button class="next"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
