@@ -4,14 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VistaGrid | Image Gallery</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- CSS Files -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
+    <header class="topbar">
+        <div class="topbar-left">
+            <div class="brand-block">
+                <h1>VistaGrid</h1>
+                <h2>Image Gallery • By Nehanshi Sanghani</h2>
+            </div>
+        </div>
+        <div class="topbar-right">
+ <a class="icon-btn" href="https://www.linkedin.com/in/NehanshiSanghani" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+    <i class="fab fa-linkedin"></i>
+ </a>
+ <a class="icon-btn" href="https://github.com/Nehanshi06" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+    <i class="fab fa-github"></i>
+ </a>
+ <a class="icon-btn" href="mailto:nehanshisanghani261@gmail.com" aria-label="Email">
+    <i class="fas fa-envelope"></i>
+ </a>
+ <button id="themeToggle" class="icon-btn theme-toggle" aria-label="Toggle theme">
+    <i class="fas fa-moon"></i>
+ </button>
+</div>
+    </header>
     <section class="gallery">
         <div class="container">
-            <h1>Image Gallery</h1>
-            
+            <h1>VistaGrid</h1>
+            <p>The ultimate image gallery.Effortlessly organize,showcase & captivate with stunning grids</p>
             <div class="row">
                 <div class="gallery-filter">
                     <span class="filter-item active" data-filter="all"><i class="fas fa-th"></i> All</span>
@@ -22,8 +51,7 @@
                     <span class="filter-item" data-filter="food"><i class="fas fa-utensils"></i> Food</span>
                 </div>
             </div>
-            
-            <div class="row">
+            <div class="gallery-grid">
                 <div class="gallery-item nature">
                     <div class="gallery-item-inner">
                         <img src="images/nature1.jpg" alt="Nature 1" data-index="0">
@@ -96,7 +124,6 @@
                         <div class="overlay"><i class="fas fa-search-plus"></i></div>
                     </div>
                 </div>
-
                 <div class="gallery-item car">
                     <div class="gallery-item-inner">
                         <img src="images/car1.jpeg" alt="Car 1" data-index="12">
@@ -169,7 +196,6 @@
                         <div class="overlay"><i class="fas fa-search-plus"></i></div>
                     </div>
                 </div>
-
                 <div class="gallery-item technology">
                     <div class="gallery-item-inner">
                         <img src="images/tec1.jpeg" alt="Technology 1" data-index="24">
@@ -242,7 +268,6 @@
                         <div class="overlay"><i class="fas fa-search-plus"></i></div>
                     </div>
                 </div>
-
                 <div class="gallery-item travel">
                     <div class="gallery-item-inner">
                         <img src="images/travel1.jpeg" alt="travel 1" data-index="36">
@@ -315,7 +340,6 @@
                         <div class="overlay"><i class="fas fa-search-plus"></i></div>
                     </div>
                 </div>
-
                 <div class="gallery-item food">
                     <div class="gallery-item-inner">
                         <img src="images/food1.jpeg" alt="Food 1" data-index="48">
@@ -391,7 +415,6 @@
             </div>
         </div>
     </section>
-
     <div id="lightbox" class="lightbox">
         <span class="close">&times;</span>
         <div class="lightbox-nav">
@@ -400,7 +423,6 @@
             <button class="next"><i class="fas fa-chevron-right"></i></button>
         </div>
     </div>
-
     <script src="script.js"></script>
 </body>
 </html>

@@ -8,12 +8,16 @@ const closeBtn = document.querySelector('.close');
 const prevBtn = document.querySelector('.prev');
 const nextBtn = document.querySelector('.next');
 
+const themeToggle = document.getElementById('themeToggle');
+const themeIcon = themeToggle.querySelector('i');
+
 const allImages = Array.from(document.querySelectorAll('.gallery-item-inner img'));
 
 let currentFilter = 'all';
 let currentImages = [];
 let currentIndex = 0;
 let zoomScale = 1;
+let isChanging = false;
 
 function shuffleArray(array) {
     const arr = [...array];
@@ -41,7 +45,6 @@ function applyShuffle(filterValue) {
             item.classList.remove('show');
             item.classList.add('hide');
         }
-        item.style.order = '';
     });
 
     shuffled.forEach((item, index) => {
@@ -79,15 +82,29 @@ document.querySelectorAll('.gallery-item-inner').forEach((item) => {
 function showLightbox() {
     lightbox.classList.add('show');
     document.body.style.overflow = 'hidden';
-    updateLightboxImage();
+    updateLightboxImage(true);
 }
 
-function updateLightboxImage() {
+function updateLightboxImage(initial = false) {
     const img = currentImages[currentIndex];
     if (!img) return;
-    lightboxImg.src = img.src;
-    lightboxImg.alt = img.alt;
-    lightboxImg.style.transform = `scale(${zoomScale})`;
+
+    if (!initial) {
+        lightboxImg.classList.add('changing');
+        setTimeout(() => {
+            lightboxImg.src = img.src;
+            lightboxImg.alt = img.alt;
+            lightboxImg.style.transform = `scale(${zoomScale})`;
+            requestAnimationFrame(() => {
+                lightboxImg.classList.remove('changing');
+            });
+        }, 160);
+    } else {
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+        lightboxImg.style.transform = `scale(${zoomScale})`;
+        lightboxImg.classList.remove('changing');
+    }
 }
 
 function closeLightbox() {
@@ -98,17 +115,21 @@ function closeLightbox() {
 }
 
 function nextImage() {
-    if (!currentImages.length) return;
+    if (!currentImages.length || isChanging) return;
+    isChanging = true;
     currentIndex = (currentIndex + 1) % currentImages.length;
     zoomScale = 1;
-    updateLightboxImage();
+    updateLightboxImage(false);
+    setTimeout(() => { isChanging = false; }, 220);
 }
 
 function prevImage() {
-    if (!currentImages.length) return;
+    if (!currentImages.length || isChanging) return;
+    isChanging = true;
     currentIndex = (currentIndex - 1 + currentImages.length) % currentImages.length;
     zoomScale = 1;
-    updateLightboxImage();
+    updateLightboxImage(false);
+    setTimeout(() => { isChanging = false; }, 220);
 }
 
 nextBtn.addEventListener('click', nextImage);
@@ -144,3 +165,16 @@ lightboxImg.addEventListener('wheel', (e) => {
     }
     lightboxImg.style.transform = `scale(${zoomScale})`;
 }, { passive: false });
+
+themeToggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark');
+    const isDark = document.body.classList.contains('dark');
+    themeIcon.className = isDark ? 'fas fa-sun' : 'fas fa-moon';
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+});
+
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme === 'dark') {
+    document.body.classList.add('dark');
+    themeIcon.className = 'fas fa-sun';
+}
