@@ -487,3 +487,63 @@ body.dark .theme-toggle {
         padding: 8px 11px;
     }
 }
+
+/* =========================
+   VISTAGRID FOOTER
+========================= */
+
+.footer-bottom{
+    width: 100%;
+    margin-top: 50px;
+    padding: 22px 15px;
+
+    text-align: center;
+
+    background: var(--topbar);
+    backdrop-filter: blur(16px);
+
+    border-top: 1px solid rgba(255,255,255,0.12);
+
+    color: var(--subtext);
+
+    font-size: 0.95rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+
+    box-shadow: 0 -8px 24px var(--shadow);
+
+    transition:
+        background 0.5s ease,
+        color 0.5s ease,
+        border 0.5s ease;
+}
+
+/* =========================
+   DARK MODE AUTO MATCH
+========================= */
+
+body.dark .footer-bottom{
+    border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+/* =========================
+   FOOTER TEXT
+========================= */
+
+.footer-bottom p{
+    margin: 0;
+    color: inherit;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:768px){
+
+    .footer-bottom{
+        padding: 18px 10px;
+        font-size: 0.85rem;
+    }
+
+}
